@@ -1,5 +1,8 @@
 <template>
+  <!-- Loading animasyonu -->
   <Loading v-if="LoadingPage" />
+  <!-- Loading animasyonu -->
+
   <div class="container" v-else>
     <div class="left_section">
       <div class="cards">
@@ -32,7 +35,8 @@
 </template>
 
 <script>
-import cardData from '~/card.js'; // Kart listesini içeri aktarıyoruz
+// Validate kütüphaneleri 'VeeValidate, Vuelidate, Vue Formulate' bu proje özelinde kullanmadım fakat dokümantasyon okudum ama yapabilecek kadar anlamadım.
+import cardData from '~/card.js'; // Kart listesi
 
 export default {
   name: 'IndexPage',
