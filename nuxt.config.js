@@ -34,9 +34,11 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
-
+  generate: {
+    dir: 'dist'
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    buildDir: 'dist', // Çıktı dizini
+
   }
 }
