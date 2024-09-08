@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "deployVercel": "push-dir --dir=dist --branch=vercel --cleanup",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
