@@ -17,8 +17,9 @@
       <div class="grid_2 input-group">
         <label for="card_number">Kart Numarası</label>
         <input
-          type="text"
-          maxlength="16"
+          type="tel"
+          v-mask="'#### #### #### ####'"
+          maxlength="19"
           v-model="inputNumber"
           placeholder="Kart Numaranız"
           @input="emitInput"
@@ -84,7 +85,7 @@
 
     <!-- Teşekkür mesajı -->
     <div v-if="formCompleted" class="completed-message">
-      Teşekkürler! Bilgileriniz başarıyla gönderildi.
+      Teşekkürler! Bilgileriniz başarıyla gönderildi. <br> <br> Ana Sayfaya yönlendiriliyorsunuz...
     </div>
   </div>
 </template>

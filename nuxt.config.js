@@ -21,8 +21,11 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+
   plugins: [
-  ],
+
+      ],
+  
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -33,12 +36,21 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+
   ],
-  generate: {
-    dir: 'dist'
-  },
+  buildDir:"dist",
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
 
-  }
+  },
+  router: {
+    extendRoutes(routes) {
+      routes.push({
+        name: 'not-found',
+        path: '*',
+        component: '~/pages/404.vue',
+      }) // 404 yönlendirme
+      /* routes.push({name: 'virgo-webview', path: '/virtual-oyunlar-webview', component: '~/pages/virgo-coming-soon/index.vue'}) // misli arena başkasının profili */
+    },
+  },
 }
